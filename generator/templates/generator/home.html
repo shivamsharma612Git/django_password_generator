@@ -1,0 +1,60 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!--<h2> This is the new homepage </h2>-->
+
+<div class = "container text-center">
+    <h1> Password Generator </h1>
+
+    <a href="{% url 'About_us' %}">About us</a>
+    <br>
+    <br>
+
+    <!--{{ password }}-->
+
+    <!--<form action="password">-->
+    <!--    <select name="length">-->
+    <!--        <option value = 5>5 char long</option>-->
+    <!--        <option value = 6>6 char long</option>-->
+    <!--        <option value = 7>7 char long</option>-->
+    <!--        <option value = 8>8 char long</option>-->
+    <!--        <option value = 9>9 char long</option>-->
+    <!--        <option value = 10>10 char long</option>-->
+    <!--        <option value = 11>11 char long</option>-->
+    <!--    </select>-->
+
+    <!--    <input type="submit" value="Generate Password">-->
+    <!--</form>-->
+
+    <form action="{% url 'password' %}">
+        <select name="length">
+            <option value = 5>5 char long</option>
+            <option value = 6>6 char long</option>
+            <option value = 7>7 char long</option>
+            <option value = 8>8 char long</option>
+            <option value = 9>9 char long</option>
+            <option value = 10>10 char long</option>
+            <option value = 11>11 char long</option>
+            <option value = 12 selected="selected">12 char long</option>
+            <option value = 13>13 char long</option>
+            <option value = 14>14 char long</option>
+        </select> length
+        <br>
+
+        <input type="checkbox" name="uppercase"> Upper-Case
+        <br>
+
+        <input type="checkbox" name="numbers"> Numbers
+        <br>
+
+        <input type="checkbox" name="special"> Special
+        <br>
+
+        <input class = "btn btn-primary" type="submit" value="Generate Password">
+    </form>
+</div>
+
+
+
+
+
+
+
